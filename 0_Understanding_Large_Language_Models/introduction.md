@@ -28,7 +28,7 @@ La palabra “grande” hace referencia tanto al número de parámetros (que pue
 
 Los LLM forman parte de la inteligencia artificial generativa (GenAI) y representan una aplicación concreta del aprendizaje profundo, que a su vez es un subcampo del aprendizaje automático. Mientras que el aprendizaje automático tradicional requería la extracción manual de características (por ejemplo, en un filtro de spam), el aprendizaje profundo con redes neuronales multicapa permite aprender directamente de los datos sin esa intervención manual.
 
-![Texto alternativo](../imgs/1.1.png)
+![Texto alternativo](./imgs/1.1.png)
 
 ## Aplicaciones de los LLM
 - Qué hacen: los LLM analizan y generan texto no estructurado con gran precisión, por eso se usan en tareas de procesamiento de lenguaje natural.
@@ -53,7 +53,7 @@ El proceso de creación de un LLM se realiza en dos etapas:
 
 En resumen, estas etapas permiten construir LLM eficientes y adaptables, desde un modelo base general hasta un modelo especializado para tareas concretas.
 
-![Texto alternativo](../imgs/1.2.png)
+![Texto alternativo](./imgs/1.2.png)
 
 ## Introducción a la arquitectura del transformador
 - La mayoría de los LLM modernos se basan en la arquitectura de transformador, introducida en 2017, diseñada originalmente para traducción automática.
@@ -72,16 +72,16 @@ En resumen, estas etapas permiten construir LLM eficientes y adaptables, desde u
 
     - GPT: utiliza principalmente el decodificador, diseñado para tareas generativas como traducción, resumen, escritura de código o ficción.
 
-    ![Texto alternativo](../imgs/1.3.png)
+    ![Texto alternativo](./imgs/1.3.png)
 
 - Los modelos GPT destacan por su capacidad de aprendizaje de cero disparos y de pocos disparos, permitiendo realizar tareas desconocidas con pocos o ningún ejemplo.
 
-    ![Texto alternativo](../imgs/1.5.png)
+    ![Texto alternativo](./imgs/1.5.png)
 
 - Relación transformadores vs LLM: todos los LLM actuales basados en texto usan transformadores, pero no todos los transformadores son LLM (también se aplican en visión o tareas no lingüísticas).
 
 
-![Texto alternativo](../imgs/1.4.png)
+![Texto alternativo](./imgs/1.4.png)
 
 ## Utilización de grandes conjuntos de datos
 
@@ -104,11 +104,11 @@ En resumen, estas etapas permiten construir LLM eficientes y adaptables, desde u
 
 - El preentrenamiento de GPT se basa en la predicción de la siguiente palabra, un enfoque de aprendizaje autosupervisado, que permite usar grandes conjuntos de datos de texto sin etiquetar.
 
-    ![Texto alternativo](../imgs/1.6.png)
+    ![Texto alternativo](./imgs/1.6.png)
 
 - A diferencia del transformador original (codificador + decodificador), GPT utiliza solo el decodificador, funcionando de manera autorregresiva: cada palabra generada depende de las anteriores, mejorando la coherencia del texto.
 
-    ![Texto alternativo](../imgs/1.7.png)
+    ![Texto alternativo](./imgs/1.7.png)
 
 - GPT-3 es un modelo muy grande, con 96 capas de transformador y 175 mil millones de parámetros, frente a las 6 capas del transformador original.
 
@@ -130,4 +130,4 @@ Se destaca que el preentrenamiento desde cero de un LLM completo es extremadamen
 
 Estas etapas permiten comprender todo el ciclo de construcción y adaptación de un LLM, desde los datos crudos hasta un modelo funcional para tareas reales.
 
-![Texto alternativo](../imgs/1.8.png)
+![Texto alternativo](./imgs/1.8.png)

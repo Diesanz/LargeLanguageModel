@@ -5,7 +5,7 @@ Entrenar LLM con millones o miles de millones de parámetros mediante tareas de 
 
 Sin embargo, antes de implementar y entrenar los LLM en los próximos capítulos, es necesario preparar el conjunto de datos de entrenamiento.
 
-![Texto alternativo](../imgs/2.1.png)
+![Texto alternativo](./imgs/2.1.png)
 
 ## Comprensión  de  las  incrustaciones  de  palabras
 
@@ -14,7 +14,7 @@ Dado que el texto es categórico, no es compatible con las operaciones matemáti
 
 La idea de convertir datos a un formato vectorial se denomina incrustación (embedding).
 
-![Texto alternativo](../imgs/2.2.png)
+![Texto alternativo](./imgs/2.2.png)
 En esencia, una incrustación es un mapeo de objetos discretos —como palabras, imágenes o incluso documentos completos— a puntos en un espacio vectorial continuo. El propósito principal de las incrustaciones es convertir datos no numéricos en un formato que las redes neuronales puedan procesar.
 
 Dado que nuestro objetivo es entrenar LLM similares a GPT, que aprenden a generar texto palabra por palabra, nos centramos en las incrustaciones de palabras.
