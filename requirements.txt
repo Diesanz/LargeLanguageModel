@@ -17,7 +17,8 @@ datasets==2.21.0
 sentence-transformers==3.0.1
 huggingface-hub==0.24.6
 accelerate==0.34.2
-bitsandbytes==0.43.3  
+bitsandbytes==0.43.3 
+tiktoken #Implementación de BPE
 
 # === Gráficos interactivos ===
 plotly==5.23.0
