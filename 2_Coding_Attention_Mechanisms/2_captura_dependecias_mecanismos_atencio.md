@@ -14,4 +14,4 @@ La  autoatención  es  un  componente  clave  de  los  LLM  contemporáneos  bas
 ![Texto alternativo](./imgs/3.6.png)
 
 
-[Atender a diferentes partes de la entrada con autoatención](./3_atender_diferentes_partes_autoantencion)
+[Atender a diferentes partes de la entrada con autoatención](./3_entradas_autoatencion.ipynb)

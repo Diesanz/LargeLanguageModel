@@ -8,4 +8,4 @@ Aunque este esquema permitió avances en el procesamiento de texto, su principal
 
 ![Texto alternativo](./imgs/3.4.png)
 
-[Prs](./.md)
+[Captura de dependencias mediante mecanismos de atención](./2_captura_dependecias_mecanismos_atencio.md)
