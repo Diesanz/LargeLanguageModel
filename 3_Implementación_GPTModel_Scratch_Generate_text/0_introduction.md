@@ -8,3 +8,4 @@ La arquitectura LLM que se muestra en la figura, consta de varios bloques que se
 
 En la siguiente sección, se mostrará una visión general de la arquitectura del modelo antes de analizar los componentes al detalle.
 
+[Codificación de la arquitectura LLM](./1_codificacion_arquitectura_LLM.ipynb)

@@ -1,4 +1,5 @@
 .vscode
 .qodo
 */__init__.py
+*/__pycache__/
 txt/
