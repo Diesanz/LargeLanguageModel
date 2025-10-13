@@ -1,5 +1,5 @@
-from transformeBlock import TransformerBlock
-from layerNorm import LayerNorm
+from .transformeBlock import TransformerBlock
+from .layerNorm import LayerNorm
 import torch
 import torch.nn as nn
 
