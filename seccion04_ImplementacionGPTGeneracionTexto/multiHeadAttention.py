@@ -22,7 +22,7 @@ class MultiHeadAttention(nn.Module):
         keys = self.W_key(x)                                      #(b, num_tokens, d_out)
         queries = self.W_query(x)                                 
         values = self.W_value(x)                                  
-        #Dividir  implícitamente  la  matriz  añadiendo  una  dimensión  `num_heads`.  Luego,  desenrollamos  la  última  dimensión:  (b,
+        #Dividir  implícitamente  la  matriz  añadiendo  una  dimensión  `num_heads`.  Luego,  desenrrollamos  la  última  dimensión:  (b,
         #núm_tokens,  d_out)  >  (b,  núm_tokens,  núm_cabezas,  cabeza_dim)
         keys = keys.view(b, num_tokens, self.num_heads, self.head_dim) 
         values = values.view(b, num_tokens, self.num_heads, self.head_dim) 
