@@ -34,8 +34,10 @@ def generate_and_print_sample(model, tokenizer, device, start_context):
 
 def generate(model, idx, max_new_tokens, context_size,
             temperature=1.0, top_k=None, eos_id=None):
+    device = next(model.parameters()).device
     for _ in range(max_new_tokens):                               #bucle for donde obtener logits y centrarse soli en el útimo paso de tiempo
-        idx_cond = idx[:, -context_size:]
+        idx = idx.to(device)
+        idx_cond = idx[:, -context_size:].to(device)
         with torch.no_grad():
             logits = model(idx_cond)
         logits = logits[:, -1, :]
@@ -54,7 +56,7 @@ def generate(model, idx, max_new_tokens, context_size,
                 idx_next = torch.multinomial(probs, num_samples=1)
         else:                                                     #selección condiciosa del siguiente token
             idx_next = torch.argmax(logits, dim=-1, keepdim=True)
-        if idx_next == eos_id:                                    #detener la generación anticipada si se encuentra untoken de fin de secuencia 
+        if idx_next.item() == eos_id:                                    #detener la generación anticipada si se encuentra untoken de fin de secuencia 
             break   
         idx = torch.cat((idx, idx_next), dim=1)
     return idx
