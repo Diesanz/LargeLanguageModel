@@ -31,6 +31,34 @@ def generate_and_print_sample(model, tokenizer, device, start_context):
         decoded_text = token_ids_to_text(token_ids, tokenizer)
         print(decoded_text.replace("\n", " "))  
     model.train()
+
+def generate(model, idx, max_new_tokens, context_size,
+            temperature=1.0, top_k=None, eos_id=None):
+    for _ in range(max_new_tokens):                               #bucle for donde obtener logits y centrarse soli en el útimo paso de tiempo
+        idx_cond = idx[:, -context_size:]
+        with torch.no_grad():
+            logits = model(idx_cond)
+        logits = logits[:, -1, :]
+        if top_k is not None:                                     #filtar logits con muestreo top_k
+            top_logits, _ = torch.topk(logits, top_k)
+            min_val = top_logits[:, -1]
+            logits = torch.where(
+                logits < min_val,
+                torch.tensor(float('-inf')).to(logits.device),
+                logits
+            )
+
+        if temperature > 0.0:                                         #aplicar escalado de temperatura
+                logits = logits / temperature
+                probs = torch.softmax(logits, dim=-1)
+                idx_next = torch.multinomial(probs, num_samples=1)
+        else:                                                     #selección condiciosa del siguiente token
+            idx_next = torch.argmax(logits, dim=-1, keepdim=True)
+        if idx_next == eos_id:                                    #detener la generación anticipada si se encuentra untoken de fin de secuencia 
+            break   
+        idx = torch.cat((idx, idx_next), dim=1)
+    return idx
+
 def train_model_simple(model, train_loader, val_loader, optimizer, device, num_epochs, eval_freq, eval_iter, start_context, tokenizer):
 
     train_losses, val_losses, track_tokens_seen = [], [], [] #inicializar listas para rastrear pérdidas y tokens vistos
