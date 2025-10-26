@@ -1,4 +1,4 @@
-# Diferentes categorías de ajuyste fino
+# Diferentes categorías de ajuste fino
 
 Las formas más comunes de perfeccionar los modelos lingüísticos son el perfeccionamiento de instrucciones y el perfeccionamiento de clasificación. El perfeccionamiento de instrucciones implica entrenar un modelo lingüístico en un conjunto de tareas mediante instrucciones específicas para mejorar su capacidad de comprender y ejecutar tareas descritas en indicaciones de lenguaje natural.
 
@@ -12,7 +12,7 @@ El punto clave es que un modelo de clasificación afinada está restringido a pr
 
 ![Texto alternativo](./imgs/6.3.png)
 
-A diferencia del modelo de clasificación finamente ajustado que se muestra en la figura, un modelo de instrucción finamente ajustado suele tener la capacidad de realizar una gama más amplia de tareas.se puede considerar un modelo de clasificación finamente ajustado como altamente especializado y, porlo general, es más fácil desarrollar un modelo especializado que un modelo generalista que funcione bien en diversas tareas.
+A diferencia del modelo de clasificación finamente ajustado que se muestra en la figura, un modelo de instrucción finamente ajustado suele tener la capacidad de realizar una gama más amplia de tareas. Se puede considerar un modelo de clasificación finamente ajustado como altamente especializado y, por lo general, es más fácil desarrollar un modelo especializado que un modelo generalista que funcione bien en diversas tareas.
 
 ### Ajuste fino de instrucciones
 
