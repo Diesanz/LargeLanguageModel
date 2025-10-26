@@ -3,5 +3,5 @@
 */__pycache__/
 txt/
 */*.pth
-seccion05_PreentrenamientoDatosNoEtiquetados/gpt2
+*/gpt2
 seccion05_PreentrenamientoDatosNoEtiquetados/gpt_download.py
