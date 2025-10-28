@@ -1,6 +1,6 @@
 import torch 
 from seccion04_ImplementacionGPTGeneracionTexto.generateTextSimple import generate_text_simple
-from calcTextValLoss import calc_loss_loader, calc_loss_batch
+from .calcTextValLoss import calc_loss_loader, calc_loss_batch
 
 def text_to_token_ids(text, tokenizer):
     encoded = tokenizer.encode(text, allowed_special={'<|endoftext|>'})
