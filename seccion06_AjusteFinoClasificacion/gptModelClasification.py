@@ -8,7 +8,7 @@ CHOOSE_MODEL = "gpt2-small (124M)"
 BASE_CONFIG = {
     "vocab_size": 50257,     # Vocabulary size
     "context_length": 1024,  # Context length
-    "drop_rate": 0.0,        # Dropout rate
+    "drop_rate": 0.1,        # Dropout rate
     "qkv_bias": True         # Query-key-value bias
 }
 model_configs = {
