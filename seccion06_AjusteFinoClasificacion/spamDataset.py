@@ -2,6 +2,26 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset
 
+def create_balanced_dataset(df):
+    num_spam = df[df["Label"] == "spam"].shape[0] #estancias de spam
+    ham_subset = df[df["Label"] == "ham"].sample(num_spam, random_state=123) #muestreo aleatorio de instancias "no spam" para que coicidan con el n.instancias de spam
+    balanced_df = pd.concat([ham_subset, df[df["Label"] == "spam"]]) #combinar el subconjunto con el "spam"
+    return balanced_df
+
+def random_split(df, train_frac, val_frac):
+    df = df.sample(frac=1, random_state=123) #barajar todo el df
+    df = df.reset_index(drop=True)
+
+    train_end = int(len(df) * train_frac ) #calcular los índices
+    train_df = df[:train_end] #dividir el df
+
+    val_end = train_end + int(len(df) * val_frac)
+    val_df = df[train_end:val_end]
+
+    #Se  supone  que  el  tamaño  de  la  prueba  es  0,2
+    test_df = df[val_end:]
+    return train_df, val_df, test_df
+
 class SpamDataset(Dataset):
     def __init__(self, csv_file, tokenizer, max_length=None, pad_token_id=50256):
         self.data = pd.read_csv(csv_file)
