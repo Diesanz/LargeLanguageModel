@@ -11,3 +11,5 @@ Pasos para el procesos de ajuste de instrucciones:
 ![Texto alternativo](./imgs/7.3.png)
 
 La  preparación  del  conjunto  de  datos  es  un  aspecto  clave  del  ajuste  de  instrucciones,  al  que  se  dedica  la  mayor  parte  del  tiempo  de esta sección.  La  siguiente  sección,  implementa  el  código  para  descargar  y  formatear  el  conjunto  de  datos,  que  constituye  el  primer  paso  en  el  proceso  de  preparación.
+
+[Preparación de un conjunto de datos para el ajuste fino de instrucciones supervisadas](./2_preparacion_conjunto_datos_instrucciones.ipynb)
